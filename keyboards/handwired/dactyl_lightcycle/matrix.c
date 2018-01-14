@@ -301,12 +301,12 @@ static matrix_row_t read_cols(uint8_t row)
 /* Row pin configuration
  *
  * Teensy
- * row: 8  9  10 11 12 13 14 15
- * pin: B0 B1 B2 B3 D2 D3 C6 C7
+ * row: 7  8   9 10 11 12 13
+ * pin: B0 B1 B2 B3 D2 D3 C6
  *
  * MCP23018
- * row: 0  1  2  3  4  5  6  7
- * pin: A0 A1 A2 A3 A4 A5 A6 A7
+ * row: 0  1  2  3  4  5  6
+ * pin: A0 A1 A2 A3 A4 A5 A6
  */
 static void unselect_rows(void)
 {
@@ -329,18 +329,18 @@ static void unselect_rows(void)
     DDRD  &= ~(1<<2 | 1<<3);
     PORTD &= ~(1<<2 | 1<<3);
     DDRC  &= ~(1<<6 | 1<<7);
-    PORTC &= ~(1<<6 | 1<<7);
+    PORTC &= ~(1<<6);
 }
 
 /* Row pin configuration
  *
  * Teensy
- * row: 8  9  10 11 12 13 14 15
- * pin: B0 B1 B2 B3 D2 D3 C6 C7
+ * row: 8  9  10 11 12 13 14
+ * pin: B0 B1 B2 B3 D2 D3 C6
  *
  * MCP23018
- * row: 0  1  2  3  4  5  6  7
- * pin: A0 A1 A2 A3 A4 A5 A6 A7
+ * row: 0  1  2  3  4  5  6
+ * pin: A0 A1 A2 A3 A4 A5 A6
  */
 static void select_row(uint8_t row)
 {
@@ -361,37 +361,33 @@ static void select_row(uint8_t row)
         // select on teensy
         // Output low(DDR:1, PORT:0) to select
         switch (row) {
-            case 8:
+            case 7:
                 DDRB  |= (1<<0);
                 PORTB &= ~(1<<0);
                 break;
-            case 9:
+            case 8:
                 DDRB  |= (1<<1);
                 PORTB &= ~(1<<1);
                 break;
-            case 10:
+            case 9:
                 DDRB  |= (1<<2);
                 PORTB &= ~(1<<2);
                 break;
-            case 11:
+            case 10:
                 DDRB  |= (1<<3);
                 PORTB &= ~(1<<3);
                 break;
-            case 12:
+            case 11:
                 DDRD  |= (1<<2);
                 PORTD &= ~(1<<3);
                 break;
-            case 13:
+            case 12:
                 DDRD  |= (1<<3);
                 PORTD &= ~(1<<3);
                 break;
-            case 14:
+            case 13:
                 DDRC  |= (1<<6);
                 PORTC &= ~(1<<6);
-                break;
-            case 15:
-                DDRC  |= (1<<7);
-                PORTC &= ~(1<<7);
                 break;
         }
     }

@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * At this time, "row" in the dactyl's code actually means "column" on the
  * physical keyboard. It's confusing. I'm sorry. Blame Jack Humbert :P
  */
-#define MATRIX_ROWS 16
+#define MATRIX_ROWS 14
 #define MATRIX_ROWS_PER_SIDE (MATRIX_ROWS / 2)
 #define MATRIX_COLS 4
 

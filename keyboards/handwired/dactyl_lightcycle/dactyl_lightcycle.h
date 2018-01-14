@@ -35,36 +35,34 @@ uint8_t init_mcp23018(void);
     k10,k11,k12,k13,k14,k15,                                    \
     k20,k21,k22,k23,k24,k25,                                    \
     k30,k31,k32,k33,k34,                                        \
-                            k26,k27,                            \
-						k35,k36,k37,                            \
+                            k26,k06,                            \
+						k35,k36,k16,                            \
                                                                 \
     /* right hand, spatial positions */                         \
-            k0A,k0B,k0C,k0D,k0E,k0F,                            \
-            k1A,k1B,k1C,k1D,k1E,k1F,                            \
-            k2A,k2B,k2C,k2D,k2E,k2F,                            \
-                k3B,k3C,k3D,k3E,k3F,                            \
-    k28,k29,                                                    \
-    k38,k39,k3A )                                               \
+            k08,k09,k0A,k0B,k0C,k0D,                            \
+            k18,k19,k1A,k1B,k1C,k1D,                            \
+            k28,k29,k2A,k2B,k2C,k2D,                            \
+                k39,k3A,k3B,k3C,k3D,                            \
+    k07,k27,                                                    \
+    k17,k37,k38 )                                               \
                                                                 \
    /* matrix positions */                                       \
    {                                                            \
-    { k00,   k10,   k20, k30, }, \
-    { k01,   k11,   k21, k31, }, \
-    { k02,   k12,   k22, k32, }, \
-    { k03,   k13,   k23, k33, }, \
-    { k04,   k14,   k24, k34, }, \
-    { k05,   k15,   k25, k35, }, \
-    { KC_NO, KC_NO, k26, k36, }, \
-    { KC_NO, KC_NO, k27, k37, }, \
-                                 \
-    { KC_NO, KC_NO, k28, k38, }, \
-    { KC_NO, KC_NO, k29, k39, }, \
-    { k0A,   k1A,   k2A, k3A, }, \
-    { k0B,   k1B,   k2B, k3B, }, \
-    { k0C,   k1C,   k2C, k3C, }, \
-    { k0D,   k1D,   k2D, k3D, }, \
-    { k0E,   k1E,   k2E, k3E, }, \
-    { k0F,   k1F,   k2F, k3F, }  \
+    { k00, k10, k20, k30, }, \
+    { k01, k11, k21, k31, }, \
+    { k02, k12, k22, k32, }, \
+    { k03, k13, k23, k33, }, \
+    { k04, k14, k24, k34, }, \
+    { k05, k15, k25, k35, }, \
+    { k06, k16, k26, k36, }, \
+                             \
+    { k07, k17, k27, k37, }, \
+    { k08, k18, k28, k38, }, \
+    { k09, k19, k29, k39, }, \
+    { k0A, k1A, k2A, k3A, }, \
+    { k0B, k1B, k2B, k3B, }, \
+    { k0C, k1C, k2C, k3C, }, \
+    { k0D, k1D, k2D, k3D, }  \
    }
 
 #define LAYOUT_dactyl_lightcycle KEYMAP
