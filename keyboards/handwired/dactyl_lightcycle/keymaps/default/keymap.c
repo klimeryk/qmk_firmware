@@ -16,35 +16,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | Del  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  \   |
+ * | Del  |   :  |   ,  |   .  |   P  |   Y  |                    |   F  |   G  |   C  |   R  |   L  |  \   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | BkSp |   A  |   S  |   D  |   F  |   G  |                    |   H  |   J  |   K  |   L  |; / L2|'/Cmd |
+ * |  -   |   A  |   O  |   E  |   U  |   I  |                    |   D  |   H  |   T  |   N  |   S  |  ?   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LShift|Z/Ctrl|   X  |   C  |   V  |   B  |                    |   N  |   M  |   ,  |   .  |//Ctrl|RShift|
+ * |LShift|   '  |   Q  |   J  |   K  |   X  |                    |   B  |   M  |   W  |   V  |   Z  |RShift|
  * |------+------+------+------+------+------'                    `------+------+------+------+------+------|
- * |Grv/L1|  '"  |AltShf| Left | Right|                                  |  Up  | Down |   [  |   ]  | ~L1  |
+ * |Grv/L1|  '"  | Mute | VolUp|VolDn |                                  | Left | Down |  Up  | Right| ~L1  |
  * `----------------------------------'                                  `----------------------------------'
  *                                      ,-------------.  ,-------------.
- *                                      | App  | LGui |  | Alt  | ^/Esc|
+ *                                      | End  | LGui |  | Alt  | Home |
  *                               ,------|------|------|  |------+------+------.
- *                               | Space|Backsp| End  |  | Home |  Tab |Enter |
+ *                               | Enter| ~L1  | End  |  | Esc  |Space |RShift|
  *                               `--------------------'  `--------------------'
  */
 [BASE] = LAYOUT_dactyl_lightcycle(  // layer 0 : default
         // left hand
-          KC_DELT,         KC_Q,           KC_W,     KC_E,     KC_R,  KC_T,
-          KC_BSPC,         KC_A,           KC_S,     KC_D,     KC_F,  KC_G,
-          KC_LSFT,  CTL_T(KC_Z),           KC_X,     KC_C,     KC_V,  KC_B,
-  LT(SYMB,KC_GRV),      KC_QUOT,  LALT(KC_LSFT),  KC_LEFT,  KC_RGHT,
-                                                                      ALT_T(KC_APP),  KC_LGUI,
-                                                             KC_SPC,        KC_BSPC,   KC_END,
+          KC_DELT,      KC_SCLN,        KC_COMM,   KC_DOT,     KC_P,  KC_Y,
+         KC_MINUS,         KC_A,           KC_O,     KC_E,     KC_U,  KC_I,
+          KC_LSFT,      KC_QUOT,           KC_Q,     KC_J,     KC_K,  KC_X,
+  LT(SYMB,KC_GRV),      KC_QUOT,        KC_MUTE,  KC_VOLU,  KC_VOLD,
+                                                                             KC_END,  KC_LGUI,
+                                                             KC_ENT,         KC_FN1,   KC_END,
         // right hand
-                             KC_Y,   KC_U,     KC_I,     KC_O,               KC_P,         KC_BSLS,
-                             KC_H,   KC_J,     KC_K,     KC_L,  LT(MDIA, KC_SCLN),  GUI_T(KC_QUOT),
-                             KC_N,   KC_M,  KC_COMM,   KC_DOT,     CTL_T(KC_SLSH),         KC_RSFT,
-                                    KC_UP,  KC_DOWN,  KC_LBRC,            KC_RBRC,          KC_FN1,
-          KC_RALT,  CTL_T(KC_ESC),
-          KC_HOME, KC_TAB, KC_ENT
+                           KC_F,         KC_G,     KC_C,     KC_R,       KC_L,      KC_BSLS,
+                           KC_D, ALGR_T(KC_H),     KC_T,     KC_N,       KC_S,      KC_SLSH,
+                           KC_B,         KC_M,     KC_W,     KC_V,       KC_Z,      KC_RSFT,
+                                      KC_LEFT,  KC_DOWN,    KC_UP,   KC_RIGHT,       KC_FN1,
+          KC_RALT,  KC_HOME,
+           KC_ESC, KC_SPACE, KC_RSFT
     ),
 /* Keymap 1: Symbol Layer
  *
