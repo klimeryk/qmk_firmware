@@ -24,11 +24,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------'                    `------+------+------+------+------+------|
  * |Grv/L1|  '"  | Mute | VolUp|VolDn |                                  | Left | Down |  Up  | Right| ~L1  |
  * `----------------------------------'                                  `----------------------------------'
- *                                      ,-------------.  ,-------------.
- *                                      | End  | LGui |  | Alt  | Home |
- *                               ,------|------|------|  |------+------+------.
- *                               | Enter| ~L1  | End  |  | Esc  |Space |RShift|
- *                               `--------------------'  `--------------------'
+ *                        ,---------------------------.  ,---------------------------.
+ *                        | Home        | Page Up     |  | Page Down   | End         |
+ *          ,-------------|-------------|-------------|  |-------------+-------------+-------------.
+ *          | Ctrl / Tab  | Esc / Shift | Bspc        |  | Del         |Space / SYMB | Enter / Cmd |
+ *          `-----------------------------------------'  `-----------------------------------------'
  */
 [BASE] = LAYOUT_dactyl_lightcycle(  // layer 0 : default
         // left hand
@@ -36,15 +36,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_MINUS,         KC_A,           KC_O,     KC_E,     KC_U,  KC_I,
           KC_LSFT,      KC_QUOT,           KC_Q,     KC_J,     KC_K,  KC_X,
   LT(SYMB,KC_GRV),      KC_QUOT,        KC_MUTE,  KC_VOLU,  KC_VOLD,
-                                                                             KC_END,  KC_LGUI,
-                                                             KC_ENT,         KC_FN1,   KC_END,
+                                                                             KC_HOME,  KC_PGUP,
+                                                       CTL_T(KC_TAB), SFT_T(KC_ESC),  KC_BSPC,
         // right hand
                            KC_F,         KC_G,     KC_C,     KC_R,       KC_L,      KC_BSLS,
-                           KC_D, ALGR_T(KC_H),     KC_T,     KC_N,       KC_S,      KC_SLSH,
+                           KC_D, ALGR_T(KC_H),     KC_T,     KC_N,       KC_S,      KC_QUES,
                            KC_B,         KC_M,     KC_W,     KC_V,       KC_Z,      KC_RSFT,
                                       KC_LEFT,  KC_DOWN,    KC_UP,   KC_RIGHT,       KC_FN1,
-          KC_RALT,  KC_HOME,
-           KC_ESC, KC_SPACE, KC_RSFT
+   KC_PGDN,            KC_END,
+    KC_DEL, LT(SYMB, KC_SPACE), GUI_T(KC_ENTER)
     ),
 /* Keymap 1: Symbol Layer
  *
