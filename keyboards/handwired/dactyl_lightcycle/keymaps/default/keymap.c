@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LShift|   '  |   Q  |   J  |   K  |   X  |                    |   B  |   M  |   W  |   V  |   Z  |RShift|
  * |------+------+------+------+------+------'                    `------+------+------+------+------+------|
- * |Grv/L1|  '"  | Mute | VolUp|VolDn |                                  | Left | Down |  Up  | Right| ~L1  |
+ * |Grv/L1|  '"  | Mute | VolDn|VolUp |                                  | Left | Down |  Up  | Right| ~L1  |
  * `----------------------------------'                                  `----------------------------------'
  *                        ,---------------------------.  ,---------------------------.
  *                        | Home        | Page Up     |  | Page Down   | End         |
@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_DELT,      KC_SCLN,        KC_COMM,   KC_DOT,     KC_P,  KC_Y,
          KC_MINUS,         KC_A,           KC_O,     KC_E,     KC_U,  KC_I,
           KC_LSFT,      KC_QUOT,           KC_Q,     KC_J,     KC_K,  KC_X,
-  LT(SYMB,KC_GRV),      KC_QUOT,        KC_MUTE,  KC_VOLU,  KC_VOLD,
+  LT(SYMB,KC_GRV),      KC_QUOT,        KC_MUTE,  KC_VOLD,  KC_VOLU,
                                                                              KC_HOME,  KC_PGUP,
                                                        CTL_T(KC_TAB), SFT_T(KC_ESC),  KC_BSPC,
         // right hand
